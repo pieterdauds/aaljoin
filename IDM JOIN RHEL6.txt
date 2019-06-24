@@ -22,7 +22,7 @@ nameserver 10.144.6.2
 8) vi /etc/sssd/sssd.conf
 [sssd]
 ...
-full_name_format = %1$s
+default_domain_suffix=avivaid.local
 use_fully_qualified_names = True
 domain_resolution_order = avivaid.local, linux.avivaid.local
 
