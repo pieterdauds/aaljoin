@@ -1,0 +1,4 @@
+ipa group-add --desc='AD users external map' linux_remote_opr_external --external
+ipa group-add --desc='AD users' linux_remote_opr_posix
+ipa group-add-member linux_remote_opr_external --external "AVIVAID\linux_remote_opr"
+ipa group-add-member linux_remote_opr_posix --groups linux_remote_opr_external
