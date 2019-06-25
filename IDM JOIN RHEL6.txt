@@ -20,6 +20,15 @@ nameserver 10.144.6.2
 7) ipa-client-install --server=ididmifprd001.linux.avivaid.local --server=ididmifdrcprd001.linux.avivaid.local --domain=linux.avivaid.local --realm=LINUX.AVIVAID.LOCAL --mkhomedir --no-ntp --force-join 
 
 8) vi /etc/sssd/sssd.conf
+[domain/example.net]
+...
+ldap_uri = ldap://idm.lab.example.net
+ldap_sudo_search_base = ou=sudoers,dc=lab,dc=example,dc=net
+ldap_sasl_mech = GSSAPI
+ldap_sasl_authid = host/idm.lab.example.net
+ldap_sasl_realm = LAB.EXAMPLE.NET
+krb5_server = idm.lab.example.net
+
 [sssd]
 ...
 default_domain_suffix=avivaid.local
