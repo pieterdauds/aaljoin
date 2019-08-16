@@ -48,3 +48,5 @@ dns_lookup_kdc = true
 10) service sssd stop; rm -rf /var/lib/sss/db/*; service sssd start
 
 11) id test.idm
+
+Finish
